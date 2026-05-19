@@ -30,6 +30,7 @@ type OverviewData = {
     value: string;
     unit: string;
     description: string;
+    icon: string;
   };
 };
 
@@ -148,7 +149,7 @@ export default function Overview({ data, mapBanner }: OverviewProps) {
 
             <div className={styles.centerIcon}>
               <Image
-                src="/icons/weather/foggy.png"
+                src={data.visibility.icon}
                 alt="Visibility fog icon"
                 width={82}
                 height={56}
