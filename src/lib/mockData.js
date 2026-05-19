@@ -135,24 +135,24 @@ export const otherCities = [
     country: "Chaina",
     city: "Beijing",
     condition: "Cloudy",
-    icon: "rainy",
+    icon: "/icons/weather/rainy.png",
   },
   {
     country: "US",
     city: "California",
     condition: "Windly",
-    icon: "windy-rain",
+    icon: "/icons/weather/windy-rainy.png",
   },
   {
     country: "Dubai",
     city: "Arab Emirates",
     condition: "Mostly Sunny",
-    icon: "partly-cloudy",
+    icon: "/icons/weather/partly-cloudy.png",
   },
   {
     country: "Canada",
     city: "Charlottetown",
     condition: "Light SnowShower",
-    icon: "snow",
+    icon: "/icons/weather/partly-rainy.png",
   },
 ];
