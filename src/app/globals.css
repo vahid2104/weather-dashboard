@@ -14,3 +14,25 @@ button,
 input {
   font-family: inherit;
 }
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3d46 #121318;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #121318;
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3a3d46;
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c8e4f4;
+}

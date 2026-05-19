@@ -27,7 +27,7 @@ export default function Dashboard() {
         />
 
         <section className="mt-7 flex items-start gap-7">
-          <div className="w-241.25">
+          <div className="w-241">
             <Tabs
               dayTabs={tabsData.dayTabs}
               activeDayTab={tabsData.activeDayTab}

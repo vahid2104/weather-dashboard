@@ -27,10 +27,7 @@ type RightPanelProps = {
   cities: City[];
 };
 
-export default function RightPanel({
-  chanceOfRain,
-  cities,
-}: RightPanelProps) {
+export default function RightPanel({ chanceOfRain, cities }: RightPanelProps) {
   return (
     <aside className={styles.panel}>
       <motion.section

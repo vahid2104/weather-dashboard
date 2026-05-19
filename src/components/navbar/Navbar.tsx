@@ -10,7 +10,6 @@ type NavbarProps = {
   avatarUrl: string;
 };
 
-
 const Navbar = ({ location, searchPlaceholder, avatarUrl }: NavbarProps) => {
   return (
     <motion.header
@@ -25,33 +24,37 @@ const Navbar = ({ location, searchPlaceholder, avatarUrl }: NavbarProps) => {
         </button>
 
         <button className={navbarStyles.iconButton}>
-          <Bell size={18}/>
+          <Bell size={18} />
         </button>
 
         <div className={navbarStyles.locationWrapper}>
-          <MapPin size={18} className="text-white"/>
+          <MapPin size={18} className="text-white" />
           <span>{location}</span>
         </div>
-</div>
-        <div className={navbarStyles.searchWrapper}>
-          <Search size={19} className={navbarStyles.searchIcon} />
-            <input
-              type="text"
-              placeholder={searchPlaceholder}
-              className={navbarStyles.searchInput}
-            />
-        </div>
+      </div>
+      <div className={navbarStyles.searchWrapper}>
+        <Search size={19} className={navbarStyles.searchIcon} />
+        <input
+          type="text"
+          placeholder={searchPlaceholder}
+          className={navbarStyles.searchInput}
+        />
+      </div>
 
-        <div className={navbarStyles.rightSection}>
-            <button className={navbarStyles.themeToggle}>
+      <div className={navbarStyles.rightSection}>
+        <button className={navbarStyles.themeToggle}>
           <span className={navbarStyles.themeCircle}>
             <Moon size={18} />
           </span>
         </button>
-        <Image width={40} height={40} src={avatarUrl} alt="User Avatar" className={navbarStyles.avatar} />
-        </div>
-
-      
+        <Image
+          width={40}
+          height={40}
+          src={avatarUrl}
+          alt="User Avatar"
+          className={navbarStyles.avatar}
+        />
+      </div>
     </motion.header>
   );
 };

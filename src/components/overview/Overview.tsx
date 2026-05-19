@@ -119,7 +119,11 @@ export default function Overview({ data, mapBanner }: OverviewProps) {
             <h3 className={styles.cardTitle}>{data.humidity.title}</h3>
 
             <div className={styles.centerIcon}>
-              <Droplets size={64} className="text-[#c8e4f4]" strokeWidth={1.8} />
+              <Droplets
+                size={64}
+                className="text-[#c8e4f4]"
+                strokeWidth={1.8}
+              />
             </div>
 
             <div className={styles.bottomInfo}>

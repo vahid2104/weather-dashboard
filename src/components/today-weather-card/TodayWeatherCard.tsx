@@ -46,8 +46,7 @@ export default function TodayWeatherCard({ weather }: TodayWeatherCardProps) {
             </p>
 
             <p className={styles.detailText}>
-              Wind{" "}
-              <span className={styles.detailValue}>{weather.wind}</span>
+              Wind <span className={styles.detailValue}>{weather.wind}</span>
             </p>
 
             <p className={styles.detailText}>

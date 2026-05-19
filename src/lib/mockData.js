@@ -62,6 +62,12 @@ export const weeklyForecast = [
     condition: "Windy Rain",
     icon: "/icons/weather/windy-rainy.png",
   },
+  {
+    day: "FRI",
+    temperature: 16,
+    condition: "Sunny Cloudy",
+    icon: "/icons/weather/sunny-cloudy.png",
+  },
 ];
 
 export const overviewData = {
@@ -95,8 +101,7 @@ export const overviewData = {
 export const mapBannerData = {
   title: "Explore global map of wind weather and ocean condition",
   buttonText: "GET STARTED",
-  imageUrl:
-    "/images/bg-img.jpg",
+  imageUrl: "/images/bg-img.jpg",
 };
 
 export const chanceOfRainData = {

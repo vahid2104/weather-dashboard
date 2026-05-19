@@ -1,5 +1,5 @@
 export const tabsStyles = {
-  wrapper: "flex items-center justify-between",
+  wrapper: "w-[880px] flex items-center justify-between",
 
   dayTabs: "flex items-center gap-6",
 

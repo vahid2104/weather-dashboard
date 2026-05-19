@@ -38,7 +38,7 @@ export default function Tabs({
                 tabsStyles.dayTabButton,
                 isActive
                   ? tabsStyles.activeDayTabButton
-                  : tabsStyles.inactiveDayTabButton
+                  : tabsStyles.inactiveDayTabButton,
               )}
             >
               {tab}
@@ -58,7 +58,7 @@ export default function Tabs({
                 tabsStyles.modeTabButton,
                 isActive
                   ? tabsStyles.activeModeTabButton
-                  : tabsStyles.inactiveModeTabButton
+                  : tabsStyles.inactiveModeTabButton,
               )}
             >
               {tab}
