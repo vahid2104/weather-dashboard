@@ -1,6 +1,13 @@
 import Navbar from "@/components/navbar";
-import { navbarData, tabsData } from "@/lib/mockData";
 import Tabs from "@/components/tabs";
+import TodayWeatherCard from "@/components/today-weather-card";
+import WeeklyForecast from "@/components/weekly-forecast";
+import {
+  navbarData,
+  tabsData,
+  todayWeather,
+  weeklyForecast,
+} from "@/lib/mockData";
 
 const Dashboard = () => {
   return (
@@ -17,6 +24,10 @@ const Dashboard = () => {
           modeTabs={tabsData.modeTabs}
           activeModeTab={tabsData.activeModeTab}
         />
+        <section className="mt-6 flex items-start gap-8">
+          <TodayWeatherCard weather={todayWeather} />
+          <WeeklyForecast forecast={weeklyForecast} />
+        </section>
       </div>
     </main>
   );
