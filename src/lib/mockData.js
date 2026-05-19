@@ -96,7 +96,7 @@ export const mapBannerData = {
   title: "Explore global map of wind weather and ocean condition",
   buttonText: "GET STARTED",
   imageUrl:
-    "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=900&q=80",
+    "/images/bg-img.jpg",
 };
 
 export const chanceOfRainData = {

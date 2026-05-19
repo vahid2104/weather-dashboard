@@ -7,12 +7,15 @@ import {
   tabsData,
   todayWeather,
   weeklyForecast,
+  overviewData,
+  mapBannerData,
 } from "@/lib/mockData";
+import Overview from "./overview";
 
 const Dashboard = () => {
   return (
     <main className="flex justify-center items-center min-h-screen bg-[#2b2b2b] px-10 py10">
-      <div className="mx-auto h-190 w-305 rounded-[10px] bg-[#0f0f15] p-5 shadow-2xl">
+      <div className="mx-auto min-h-205 w-300 rounded-[10px] bg-[#0f0f15] p-5 shadow-2xl">
         <Navbar
           location={navbarData.location}
           searchPlaceholder={navbarData.searchPlaceholder}
@@ -28,6 +31,8 @@ const Dashboard = () => {
           <TodayWeatherCard weather={todayWeather} />
           <WeeklyForecast forecast={weeklyForecast} />
         </section>
+
+        <Overview data={overviewData} mapBanner={mapBannerData} />
       </div>
     </main>
   );
