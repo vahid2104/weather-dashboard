@@ -1,3 +1,6 @@
+const BASE_PATH =
+  process.env.NODE_ENV === "production" ? "/weather-dashboard" : "";
+
 export const navbarData = {
   location: "Dhaka, Bangladesh",
   searchPlaceholder: "Search City",
@@ -16,7 +19,7 @@ export const todayWeather = {
   time: "11:45 AM",
   temperature: 16,
   condition: "Partly Cloudy",
-  icon: "/icons/weather/sunny-cloudy.png",
+  icon: `${BASE_PATH}/icons/weather/sunny-cloudy.png`,
   realFeel: 18,
   wind: "N-E. 6-7km/h",
   pressure: "100MB",
@@ -30,43 +33,43 @@ export const weeklyForecast = [
     day: "SAT",
     temperature: 10,
     condition: "Rainy",
-    icon: "/icons/weather/rainy.png",
+    icon: `${BASE_PATH}/icons/weather/rainy.png`,
   },
   {
     day: "SUN",
     temperature: 15,
     condition: "Thunder",
-    icon: "/icons/weather/thunderstorm.png",
+    icon: `${BASE_PATH}/icons/weather/thunderstorm.png`,
   },
   {
     day: "MON",
     temperature: 11,
     condition: "Cloudy",
-    icon: "/icons/weather/partly-cloudy.png",
+    icon: `${BASE_PATH}/icons/weather/partly-cloudy.png`,
   },
   {
     day: "TUE",
     temperature: 10,
     condition: "Rainy",
-    icon: "/icons/weather/rainy.png",
+    icon: `${BASE_PATH}/icons/weather/rainy.png`,
   },
   {
     day: "WED",
     temperature: 12,
     condition: "Storm",
-    icon: "/icons/weather/thunder-rain.png",
+    icon: `${BASE_PATH}/icons/weather/thunder-rain.png`,
   },
   {
     day: "THU",
     temperature: 10,
     condition: "Windy Rain",
-    icon: "/icons/weather/windy-rainy.png",
+    icon: `${BASE_PATH}/icons/weather/windy-rainy.png`,
   },
   {
     day: "FRI",
     temperature: 16,
     condition: "Sunny Cloudy",
-    icon: "/icons/weather/sunny-cloudy.png",
+    icon: `${BASE_PATH}/icons/weather/sunny-cloudy.png`,
   },
 ];
 
@@ -95,13 +98,14 @@ export const overviewData = {
     value: "04",
     unit: "km",
     description: "Haze is affecting visibility",
+    icon: `${BASE_PATH}/icons/weather/foggy.png`,
   },
 };
 
 export const mapBannerData = {
   title: "Explore global map of wind weather and ocean condition",
   buttonText: "GET STARTED",
-  imageUrl: "/images/bg-img.jpg",
+  imageUrl: `${BASE_PATH}/images/map-banner.png`,
 };
 
 export const chanceOfRainData = {
@@ -137,27 +141,27 @@ export const chanceOfRainData = {
 
 export const otherCities = [
   {
-    country: "Chaina",
+    country: "China",
     city: "Beijing",
     condition: "Cloudy",
-    icon: "/icons/weather/rainy.png",
+    icon: `${BASE_PATH}/icons/weather/partly-cloudy.png`,
   },
   {
     country: "US",
     city: "California",
-    condition: "Windly",
-    icon: "/icons/weather/windy-rainy.png",
+    condition: "Windy",
+    icon: `${BASE_PATH}/icons/weather/windy-rainy.png`,
   },
   {
     country: "Dubai",
     city: "Arab Emirates",
     condition: "Mostly Sunny",
-    icon: "/icons/weather/partly-cloudy.png",
+    icon: `${BASE_PATH}/icons/weather/sunny-cloudy.png`,
   },
   {
     country: "Canada",
     city: "Charlottetown",
-    condition: "Light SnowShower",
-    icon: "/icons/weather/partly-rainy.png",
+    condition: "Light Snow Shower",
+    icon: `${BASE_PATH}/icons/weather/partly-rainy.png`,
   },
 ];
