@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "@/components/navbar";
 import { navbarData } from "@/lib/mockData";
 
 const Dashboard = () => {
