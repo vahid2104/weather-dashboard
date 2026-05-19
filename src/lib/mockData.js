@@ -105,7 +105,7 @@ export const overviewData = {
 export const mapBannerData = {
   title: "Explore global map of wind weather and ocean condition",
   buttonText: "GET STARTED",
-  imageUrl: `${BASE_PATH}/images/map-banner.png`,
+  imageUrl: `${BASE_PATH}/images/map-banner.jpg`,
 };
 
 export const chanceOfRainData = {
