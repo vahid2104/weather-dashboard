@@ -14,7 +14,7 @@ import {
   tabsData,
   mapBannerData,
   chanceOfRainData,
-} from "@/lib/mockData";
+} from "@/lib/staticData";
 
 export default function Dashboard() {
   const {
