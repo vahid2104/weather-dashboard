@@ -20,14 +20,20 @@ type City = {
   city: string;
   condition: string;
   icon: string;
+  temperature?: number;
 };
 
 type RightPanelProps = {
   chanceOfRain: ChanceOfRainData;
   cities: City[];
+  otherCitiesLoading?: boolean;
 };
 
-export default function RightPanel({ chanceOfRain, cities }: RightPanelProps) {
+export default function RightPanel({
+  chanceOfRain,
+  cities,
+  otherCitiesLoading = false,
+}: RightPanelProps) {
   return (
     <aside className={styles.panel}>
       <motion.section
@@ -88,38 +94,56 @@ export default function RightPanel({ chanceOfRain, cities }: RightPanelProps) {
       <section>
         <div className={styles.citiesHeader}>
           <h2 className={styles.citiesTitle}>Other Cities</h2>
-          <button className={styles.seeAll}>See All</button>
+
+          <button type="button" className={styles.seeAll}>
+            See All
+          </button>
         </div>
 
-        <div className={styles.citiesList}>
-          {cities.map((city, index) => (
-            <motion.article
-              key={city.city}
-              initial={{ opacity: 0, x: 14 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.35,
-                delay: 0.35 + index * 0.07,
-                ease: "easeOut",
-              }}
-              whileHover={{ scale: 1.02, x: -3 }}
-              className={styles.cityCard}
-            >
-              <div>
-                <p className={styles.country}>{city.country}</p>
-                <h3 className={styles.city}>{city.city}</h3>
-                <p className={styles.condition}>{city.condition}</p>
-              </div>
+        {otherCitiesLoading ? (
+          <div className={styles.citiesLoading}>Loading cities...</div>
+        ) : (
+          <div className={styles.citiesList}>
+            {cities.map((city, index) => (
+              <motion.article
+                key={`${city.country}-${city.city}`}
+                initial={{ opacity: 0, x: 14 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.35,
+                  delay: 0.35 + index * 0.07,
+                  ease: "easeOut",
+                }}
+                whileHover={{ scale: 1.02, x: -3 }}
+                className={styles.cityCard}
+              >
+                <div>
+                  <p className={styles.country}>{city.country}</p>
 
-              <WeatherIcon
-                icon={city.icon}
-                size={50}
-                alt={`${city.city} weather`}
-                className={styles.cityIcon}
-              />
-            </motion.article>
-          ))}
-        </div>
+                  <h3 className={styles.city}>{city.city}</h3>
+
+                  <p className={styles.condition}>
+                    {city.condition}
+
+                    {typeof city.temperature === "number" && (
+                      <span className={styles.cityTemperature}>
+                        {" "}
+                        • {city.temperature}°
+                      </span>
+                    )}
+                  </p>
+                </div>
+
+                <WeatherIcon
+                  icon={city.icon}
+                  size={48}
+                  alt={`${city.city} weather`}
+                  className={styles.cityIcon}
+                />
+              </motion.article>
+            ))}
+          </div>
+        )}
       </section>
     </aside>
   );
